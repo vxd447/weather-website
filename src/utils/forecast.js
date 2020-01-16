@@ -13,7 +13,7 @@ const forecast = (latitude,longitude,callback) => {
                 const summary = body.daily.data[0].summary
                 const highTemp = body.daily.data[0].temperatureHigh
                 const lowTemp = body.daily.data[0].temperatureLow
-                callback(undefined,summary+'Today\'s Highest Temperature is '+highTemp+' and Lowest Temperature is '+lowTemp +' It is currently '+temp+' degrees out.'+'There is '+rain+'% chance of rain.')
+                callback(undefined,summary+'Today\'s Highest Temperature is '+highTemp+' and Lowest Temperature is '+lowTemp +'. It is currently '+temp+' degrees out.'+'There is '+rain+'% chance of rain.')
             }
         })
 }
