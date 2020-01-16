@@ -6,6 +6,7 @@ const forecast = require('./utils/forecast')
 
 //Creating instance oObject of express module
 const app = express()
+const port = process.env.PORT || 3000
 
 //Define paths for Express config
 const publicPathDirectory = path.join(__dirname,'../public')
@@ -99,6 +100,6 @@ app.get('*', (req, res) => {
 })
 
 //Starting the port using app.listen(port-no, callback function)
-app.listen(3000, () => {
-    console.log('Server is up on port 3000')
+app.listen(port, () => {
+    console.log('Server is up on port '+port)
 })
